@@ -60,15 +60,15 @@ export const Register: React.FC = () => {
 
   return (
     <div className="min-h-[85vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-xl w-full space-y-8 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xl">
+      <div className="max-w-xl w-full space-y-8 bg-white/95 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-stone-200/80 shadow-3d-ambient">
         {/* Header */}
         <div className="text-center">
           <Link to="/" className="inline-flex items-center gap-2.5 mb-4 group">
-            <div className="w-12 h-12 rounded-2xl bg-indigo-600 flex items-center justify-center text-white shadow-md shadow-indigo-200 group-hover:scale-105 transition-transform">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-600 via-amber-700 to-indigo-700 flex items-center justify-center text-white shadow-md shadow-amber-900/15 group-hover:scale-105 transition-transform">
               <ArrowLeftRight className="w-6 h-6" />
             </div>
           </Link>
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight">
             Create Your SwapSpace Account
           </h2>
           <p className="text-xs text-slate-500 mt-2">

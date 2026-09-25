@@ -4,13 +4,13 @@ import { ArrowLeftRight, Heart, Sparkles, Shield, BookOpen, Package } from 'luci
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-900 text-slate-400 text-sm mt-auto border-t border-slate-800">
+    <footer className="bg-stone-900 text-stone-400 text-sm mt-auto border-t border-stone-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand Col */}
           <div className="space-y-4 md:col-span-1">
             <Link to="/" className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-amber-600 to-indigo-700 flex items-center justify-center text-white shadow-md">
                 <ArrowLeftRight className="w-4 h-4" />
               </div>
               <span className="text-lg font-bold text-white tracking-tight">SwapSpace</span>

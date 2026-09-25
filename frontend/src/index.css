@@ -4,7 +4,89 @@
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-900 antialiased font-sans;
+    @apply bg-[#FAF8F5] text-stone-800 antialiased font-sans selection:bg-amber-200 selection:text-stone-900;
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 }
+
+/* 3D Scene & Object Styling */
+.perspective-container {
+  perspective: 1400px;
+  perspective-origin: 50% 40%;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* 3D Shadows & Lighting Effects */
+.shadow-3d-ambient {
+  box-shadow: 
+    0 15px 35px -5px rgba(60, 40, 20, 0.08),
+    0 30px 60px -12px rgba(60, 40, 20, 0.12),
+    0 2px 6px rgba(60, 40, 20, 0.04);
+}
+
+.shadow-3d-glow-warm {
+  box-shadow: 
+    0 10px 30px -5px rgba(245, 158, 11, 0.25),
+    0 0 45px rgba(251, 191, 36, 0.2);
+}
+
+.shadow-3d-glow-lavender {
+  box-shadow: 
+    0 10px 30px -5px rgba(168, 85, 247, 0.2),
+    0 0 40px rgba(192, 132, 252, 0.18);
+}
+
+.shadow-3d-glow-sage {
+  box-shadow: 
+    0 10px 30px -5px rgba(74, 150, 114, 0.2),
+    0 0 35px rgba(110, 190, 150, 0.15);
+}
+
+.shadow-3d-floating {
+  filter: drop-shadow(0 20px 25px rgba(70, 50, 30, 0.14)) drop-shadow(0 40px 45px rgba(70, 50, 30, 0.07));
+}
+
+.shadow-isometric-object {
+  box-shadow: 
+    -12px 18px 30px -4px rgba(75, 55, 35, 0.15),
+    -4px 6px 12px rgba(75, 55, 35, 0.08);
+}
+
+/* Glassmorphism Accents with Warm Undertone */
+.glass-warm {
+  background: rgba(255, 253, 249, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.glass-warm-subtle {
+  background: rgba(253, 248, 242, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(235, 225, 210, 0.6);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(230, 220, 205, 0.7);
+}
+
+/* Custom Smooth Gradients */
+.bg-mesh-warm {
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(253, 242, 236, 0.8) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(244, 240, 249, 0.75) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(237, 245, 240, 0.7) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(254, 243, 199, 0.5) 0px, transparent 45%),
+    radial-gradient(at 20% 60%, rgba(253, 230, 220, 0.6) 0px, transparent 40%);
+}
+

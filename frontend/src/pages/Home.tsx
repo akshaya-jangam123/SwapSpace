@@ -7,6 +7,7 @@ import { Skill, Item } from '../types';
 import { SkillCard } from '../components/cards/SkillCard';
 import { ItemCard } from '../components/cards/ItemCard';
 import { ExchangeModal } from '../components/common/ExchangeModal';
+import { Hero3DBackground } from '../components/visuals/Hero3DBackground';
 import {
   ArrowLeftRight,
   Sparkles,
@@ -72,26 +73,29 @@ export const Home: React.FC = () => {
 
   return (
     <div className="space-y-20 pb-20">
-      {/* 1. Hero Section */}
-      <section className="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32 bg-gradient-to-b from-indigo-50/50 via-white to-slate-50 border-b border-slate-200/60">
+      {/* 1. Hero Section with 3D Floating Environment */}
+      <section className="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32 bg-gradient-to-b from-[#FAF7F2] via-[#FFFDF9] to-[#FAF8F5] border-b border-stone-200/70">
+        {/* Realistic 3D Background Floating Objects */}
+        <Hero3DBackground />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-100/80 border border-indigo-200 text-indigo-800 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
-            <Sparkles className="w-4 h-4 text-amber-500" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/90 text-amber-900 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm backdrop-blur-md">
+            <Sparkles className="w-4 h-4 text-amber-600" />
             Peer-to-Peer College Exchange Platform
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 tracking-tight max-w-4xl mx-auto leading-[1.1] mb-6">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-stone-900 tracking-tight max-w-4xl mx-auto leading-[1.1] mb-6">
             Swap Skills. <br />
-            <span className="bg-gradient-to-r from-indigo-600 via-indigo-700 to-indigo-900 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-700 via-rose-600 to-indigo-700 bg-clip-text text-transparent">
               Share Items.
             </span>{' '}
             Grow Together.
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mb-10 font-normal">
+          <p className="text-lg sm:text-xl text-stone-600 max-w-2xl mx-auto leading-relaxed mb-10 font-normal">
             Exchange what you know and what you have with people who have what you need — completely cash-free.
           </p>
 
@@ -99,7 +103,7 @@ export const Home: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
             <Link
               to="/discover"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-2xl shadow-lg shadow-indigo-200 transition hover:-translate-y-0.5"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 hover:from-amber-700 hover:to-amber-900 rounded-2xl shadow-lg shadow-amber-900/20 transition hover:-translate-y-0.5"
             >
               <ArrowLeftRight className="w-5 h-5" />
               Explore Swaps
@@ -107,23 +111,23 @@ export const Home: React.FC = () => {
 
             <Link
               to={isAuthenticated ? '/create-skill' : '/register'}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-200 rounded-2xl shadow-sm transition hover:-translate-y-0.5"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-stone-800 bg-white/90 hover:bg-white border border-stone-200/90 rounded-2xl shadow-sm transition hover:-translate-y-0.5 backdrop-blur-sm"
             >
-              <Zap className="w-5 h-5 text-indigo-600" />
+              <Zap className="w-5 h-5 text-amber-600" />
               Create Listing
             </Link>
           </div>
 
           {/* Example Swaps Ticker */}
-          <div className="mt-14 inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-semibold text-slate-600 bg-white/80 backdrop-blur-md px-5 py-3 rounded-2xl border border-slate-200/80 shadow-sm">
-            <span className="text-indigo-600 font-bold">Popular Trades:</span>
-            <span className="bg-slate-100 px-2.5 py-1 rounded-lg">Java ↔ Python</span>
+          <div className="mt-14 inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-semibold text-stone-700 bg-white/85 backdrop-blur-md px-5 py-3 rounded-2xl border border-stone-200/80 shadow-3d-ambient">
+            <span className="text-amber-800 font-bold">Popular Trades:</span>
+            <span className="bg-stone-100/90 px-2.5 py-1 rounded-lg border border-stone-200/50">Java ↔ Python</span>
             <span>•</span>
-            <span className="bg-slate-100 px-2.5 py-1 rounded-lg">Web Dev ↔ Communication</span>
+            <span className="bg-stone-100/90 px-2.5 py-1 rounded-lg border border-stone-200/50">Web Dev ↔ Communication</span>
             <span>•</span>
-            <span className="bg-slate-100 px-2.5 py-1 rounded-lg">Engineering Book ↔ Calculator</span>
+            <span className="bg-stone-100/90 px-2.5 py-1 rounded-lg border border-stone-200/50">Engineering Book ↔ Calculator</span>
             <span>•</span>
-            <span className="bg-slate-100 px-2.5 py-1 rounded-lg">Tutoring ↔ Lab Coat</span>
+            <span className="bg-stone-100/90 px-2.5 py-1 rounded-lg border border-stone-200/50">Tutoring ↔ Lab Coat</span>
           </div>
         </div>
       </section>

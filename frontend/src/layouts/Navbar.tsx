@@ -36,20 +36,20 @@ export const Navbar: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80">
+    <nav className="sticky top-0 z-40 bg-[#FAF8F5]/85 backdrop-blur-md border-b border-stone-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-8">
             <Link to="/" className="flex items-center gap-2.5 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-indigo-500 flex items-center justify-center text-white shadow-md shadow-indigo-200 group-hover:scale-105 transition-transform">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 via-amber-700 to-indigo-700 flex items-center justify-center text-white shadow-md shadow-amber-900/15 group-hover:scale-105 transition-transform">
                 <ArrowLeftRight className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-black bg-gradient-to-r from-indigo-600 via-indigo-700 to-slate-900 bg-clip-text text-transparent tracking-tight">
+                <span className="text-xl font-black bg-gradient-to-r from-stone-900 via-amber-900 to-indigo-950 bg-clip-text text-transparent tracking-tight">
                   SwapSpace
                 </span>
-                <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider -mt-1">
+                <span className="text-[10px] font-semibold text-amber-700/80 uppercase tracking-wider -mt-1">
                   Peer Exchange
                 </span>
               </div>
