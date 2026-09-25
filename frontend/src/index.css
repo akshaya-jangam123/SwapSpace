@@ -90,3 +90,25 @@
     radial-gradient(at 20% 60%, rgba(253, 230, 220, 0.6) 0px, transparent 40%);
 }
 
+/* Step Card Entrance Animation */
+@keyframes stepCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-step-reveal {
+  animation: stepCardReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
